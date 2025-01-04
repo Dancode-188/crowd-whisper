@@ -1,0 +1,39 @@
+{
+  "name": "crowd-whisper",
+  "version": "1.0.0",
+  "description": "Real-time crowd safety system that turns event attendees into a distributed sensor network",
+  "private": true,
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "workspaces": [
+    "client",
+    "server",
+    "shared"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "npm run dev -w client",
+    "dev:server": "npm run dev -w server",
+    "build": "npm run build -ws",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npm run lint -ws"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "eslint": "^7.32.0",
+    "prettier": "^2.4.1",
+    "typescript": "^4.4.3"
+  },
+  "keywords": [
+    "crowd",
+    "safety",
+    "real-time",
+    "event",
+    "sensor",
+    "network"
+  ],
+  "author": "Daniel Bitengo",
+  "license": "ISC"
+}
